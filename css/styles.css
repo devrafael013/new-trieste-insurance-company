@@ -24,12 +24,12 @@ header, .navbar {
 }
 
 #nav-container {
-    padding-top: 0;
+    padding-top: 63px;
     padding-bottom: 0;
 }
 
 #logo {
-    width: 120px;
+    width: 110px;
 }
 
 .navbar-brand {
