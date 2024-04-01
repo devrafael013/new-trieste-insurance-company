@@ -382,12 +382,18 @@
                             Ou nos deixe uma mensagem:
                         </p>
                     </div>
+
                     <div class="col-md-6" id="contact-form">
-                        <form action="https://formsubmit.co/devrafael013@gmail.com" method="POST">
-                            <input type="email" class="form-control" placeholder="E-mail" name="email">
-                            <input type="text" class="form-control" placeholder="Assunto" name="subject">
-                            <textarea class="form-control" rows="3" placeholder="Sua mensagem..." name="massage"></textarea>
-                            <input type="submit" class="main-btn" value="Enviar">
+
+                        <form class="form" action="#" id="email-form">
+
+                            <input name="nome" class="form-control" id="nome" type="text" placeholder="Seu Nome" />
+                            <input name="email" class="form-control" id="email" type="email" placeholder="Seu E-mail"/>
+                            
+                            <textarea name="mensagem" class="form-control" id="mensagem" type="text" placeholder="Sua Mensagem" rows="3"></textarea>
+                        
+                            <button type="submit" class="main-btn" id="emailButton">Enviar</button>
+                           
                         </form>
                     </div>
                 </div>
@@ -423,7 +429,11 @@
         </a>
     </div>
     
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/sendmail.js"></script>
     <script src="js/scripts.js"></script>
+
     
 </body>
 </html>
