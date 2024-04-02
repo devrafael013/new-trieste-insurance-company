@@ -283,8 +283,8 @@ header, .navbar {
     color: #3ec1d5;
    }
 
-   .msg-box p {
-    font-size: 22px;    
+   #msg-box p {
+    font-size: 22px;   
    }
 
    #contact-form input[type= "text"], #contact-form input[type="email"], #contact-form textarea {
@@ -353,9 +353,9 @@ header, .navbar {
     }
    }
 
-   /**/
-   
-   
-
+   /*Paginas*/
+.resumo-title {
+    font-size: 20px;
+}
 
 

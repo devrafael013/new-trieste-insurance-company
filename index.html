@@ -109,7 +109,7 @@
                         <img src="img/seguro-residencial.png" class="d-block w-100" alt="Seguro de Residencia">
                         <div class="carousel-caption d-none d-md-block">
 
-                            <a href="#" class="main-btn">Clique aqui e saiba mais</a>
+                            <a href="/residencial.html" class="main-btn">Clique aqui e saiba mais</a>
 
                         </div>
 
@@ -385,16 +385,26 @@
 
                     <div class="col-md-6" id="contact-form">
 
-                        <form class="form" action="#" id="email-form">
+                        <form action="https://api.staticforms.xyz/submit" method="post">
 
-                            <input name="nome" class="form-control" id="nome" type="text" placeholder="Seu Nome" />
-                            <input name="email" class="form-control" id="email" type="email" placeholder="Seu E-mail"/>
-                            
-                            <textarea name="mensagem" class="form-control" id="mensagem" type="text" placeholder="Sua Mensagem" rows="3"></textarea>
-                        
-                            <button type="submit" class="main-btn" id="emailButton">Enviar</button>
-                           
+                            <input type="hidden" name="accessKey" value="ef264852-75b3-4ba7-afff-f241fea57abd">
+                            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html">
+                            <input type="text" name="honeypot" style="display: none;">
+
+                            <input type="text" class="form-control" id="inputNome" name="name" placeholder="Seu nome">
+
+                            <input type="email" class="form-control" id="inputEmail" name="email" placeholder="E-mail">
+
+                            <input type="text" class="form-control" name="$CPF" placeholder="CPF">
+
+                            <input type="text" class="form-control" name="phone" placeholder="Telefone">
+
+                            <textarea name="message" class="form-control" id="textAreaMensagem" rows="3"></textarea>
+
+                            <input type="submit" class="main-btn" value="enviar">
+
                         </form>
+
                     </div>
                 </div>
 
@@ -429,10 +439,7 @@
         </a>
     </div>
     
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="js/sendmail.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js" defer></script>
 
     
 </body>
