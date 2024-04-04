@@ -25,6 +25,28 @@
     
         <!-- Parallax -->
         <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+        <!--Mascara CPF-->
+        <script>
+            function mascara_cpf(){
+                var cpf = document.getElementById('cpf')
+                if(cpf.value.length == 3 || cpf.value.length == 7) {
+                    cpf.value += "."
+                } else if (cpf.value.length == 11) {
+                    cpf.value += "-"
+                }
+            }
+        </script>
+
+        <!--Mascara Telefone-->
+        <script>
+            function mascara_telefone(){
+                var telefone= document.getElementById('telefone')
+                if(telefone.value.length == 2 || telefone.value.length == 7) {
+                    telefone.value += "-"
+                }
+            }
+        </script>
     
         <!--Botão Whatsap-->
         <style>
@@ -119,9 +141,9 @@
         
                             <input type="email" class="form-control" id="inputEmail" name="email" placeholder="E-mail">
         
-                            <input type="text" class="form-control" name="$CPF" placeholder="CPF">
-        
-                            <input type="text" class="form-control" name="phone" placeholder="Telefone">
+                            <input type="text" class="form-control" id="cpf" name="$CPF" onkeyup="mascara_cpf()" autocomplete="off" maxlength="14" placeholder="CPF">
+
+                            <input type="text" class="form-control" id="telefone" name="phone" onkeyup="mascara_telefone()" autocomplete="off"  maxlength="13" placeholder="Telefone">
         
                             <textarea name="message" class="form-control" id="textAreaMensagem" rows="3"></textarea>
         
