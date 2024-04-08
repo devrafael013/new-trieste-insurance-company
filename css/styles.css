@@ -10,6 +10,14 @@ body {
 
 .container {
     padding: 70px 0;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 p, li {
@@ -21,15 +29,20 @@ p, li {
 
 header, .navbar {
     background-color: #63badc;
+    width: 100%;
+    top: 0;
+    left: 0;
+    
 }
 
 #nav-container {
-    padding-top: 63px;
+    padding-top: 30px;
     padding-bottom: 0;
+    
 }
 
 #logo {
-    width: 110px;
+    width: 80px;
 }
 
 .navbar-brand {
@@ -66,10 +79,10 @@ header, .navbar {
 }
 
 #mainSlider .carousel-caption a {
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 100px;
-    color: #fff;
+    font-size: 15px;
+    font-weight: 200;
+    margin-bottom: 50px;
+
 }
 
 .main-btn {
