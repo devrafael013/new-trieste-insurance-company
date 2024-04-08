@@ -418,23 +418,44 @@
 
                     <div class="col-md-6" id="contact-form">
 
-                        <form action="https://api.staticforms.xyz/submit" method="post">
+                        <form action="https://formspree.io/f/mleqobbl" method="post">
 
-                            <input type="hidden" name="accessKey" value="ef264852-75b3-4ba7-afff-f241fea57abd">
-                            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html">
-                            <input type="text" name="honeypot" style="display: none;">
+                            <p>
+                                <input type="text" class="form-control" id="inputNome" name="name" placeholder="Seu nome">
+                            </p>
 
-                            <input type="text" class="form-control" id="inputNome" name="name" placeholder="Seu nome">
+                            <p>
+                                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="E-mail">
+                            </p>
 
-                            <input type="email" class="form-control" id="inputEmail" name="email" placeholder="E-mail">
+                            <p>
+                                <input type="text" class="form-control" id="cpf" name="CPF" onkeyup="mascara_cpf()" autocomplete="off" maxlength="14" placeholder="CPF">
+                            </p>
 
-                            <input type="text" class="form-control" id="cpf" name="$CPF" onkeyup="mascara_cpf()" autocomplete="off" maxlength="14" placeholder="CPF">
+                            <p>
+                                <input type="text" class="form-control" id="telefone" name="Telefone" onkeyup="mascara_telefone()" autocomplete="off"  maxlength="13" placeholder="Telefone">
+                            </p>
 
-                            <input type="text" class="form-control" id="telefone" name="phone" onkeyup="mascara_telefone()" autocomplete="off"  maxlength="13" placeholder="Telefone">
 
-                            <textarea name="message" class="form-control" id="textAreaMensagem" rows="3"></textarea>
+                            <p>
+                                <label> Selecione o tipo de seguro: </label> 
+                                <select name="Categoria" id="age">
+                                    <option value="carro"> Carro </option>
+                                    <option value="moto"> Moto </option>
+                                    <option value="residencial"> Residencial </option>
+                                    <option value="bike"> Bike </option>
+                                    <option value="caminhao"> Caminhão </option>
+                                    <option value="viagem"> Viagem </option>
+                                </select>
+                            </p>
 
-                            <input type="submit" class="main-btn" value="enviar">
+                            <p>
+                                <label> Mensagem: </label>
+                                <textarea name="mensagem" class="form-control" id="textAreaMensagem" rows="3"></textarea>
+                            </p>
+
+
+                            <button type="submit" class="main-btn" value="enviar">Enviar</button>
 
                         </form>
 
