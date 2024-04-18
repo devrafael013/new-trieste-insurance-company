@@ -1,114 +1,5 @@
 $( document ).ready(function() {
 
-  // Progress bar
-  let containerA = document.getElementById("circleA");
-
-  let circleA = new ProgressBar.Circle(containerA, {
-
-    color: '#000000',
-    strokeWidth: 8,
-    duration: 1400,
-    from: { color: '#aaa'},
-    to: { color: '#000000'},
-
-    step: function(state, circle) {
-      circle.path.setAttribute('stroke', state.color);
-
-      var value = Math.round(circle.value() * 60);
-      circle.setText(value);
-
-    }
-
-  });
-
-  let containerB = document.getElementById("circleB");
-
-  let circleB = new ProgressBar.Circle(containerB, {
-
-    color: '#000000',
-    strokeWidth: 8,
-    duration: 1600,
-    from: { color: '#aaa'},
-    to: { color: '#000000'},
-
-    step: function(state, circle) {
-      circle.path.setAttribute('stroke', state.color);
-
-      var value = Math.round(circle.value() * 254);
-      circle.setText(value);
-
-    }
-
-  });
-
-  let containerC = document.getElementById("circleC");
-
-  let circleC = new ProgressBar.Circle(containerC, {
-
-    color: '#000000',
-    strokeWidth: 8,
-    duration: 1800,
-    from: { color: '#aaa'},
-    to: { color: '#000000'},
-
-    step: function(state, circle) {
-      circle.path.setAttribute('stroke', state.color);
-
-      var value = Math.round(circle.value() * 32);
-      circle.setText(value);
-
-    }
-
-  });
-
-  let containerD = document.getElementById("circleD");
-
-  let circleD = new ProgressBar.Circle(containerD, {
-
-    color: '#000000',
-    strokeWidth: 8,
-    duration: 2000,
-    from: { color: '#aaa'},
-    to: { color: '#000000'},
-
-    step: function(state, circle) {
-      circle.path.setAttribute('stroke', state.color);
-
-      var value = Math.round(circle.value() * 5423);
-      circle.setText(value);
-
-    }
-
-  });
-
-  // iniciando loaders quando a usuário chegar no elemento
-  let dataAreaOffset = $('#data-area').offset();
-  // stop serve para a animação não carregar mais que uma vez
-  let stop = 0;
-
-  $(window).scroll(function (e) {
-
-    let scroll = $(window).scrollTop();
-
-    if(scroll > (dataAreaOffset.top - 500) && stop == 0) {
-      circleA.animate(1.0);
-      circleB.animate(1.0);
-      circleC.animate(1.0);
-      circleD.animate(1.0);
-
-      stop = 1;
-    }
-
-  });
-
-  // Parallax
-
-  // setTimeout serve para carregar primeiro as imagens
-  setTimeout(function() {
-    $('#data-area').parallax({imageSrc: 'img/fundo-azul-claro.png'});
-    $('#apply-area').parallax({imageSrc: 'img/pattern.png'});
-  }, 200);
-
   // Filtro portfólio
 
   $('.filter-btn').on('click', function() {
@@ -172,8 +63,37 @@ $( document ).ready(function() {
     }
 
     $([document.documentElement, document.body]).animate({
-        scrollTop: $(scrollTo).offset().top - 70
-    }, 1500);
+        scrollTop: $(scrollTo).offset().top - 90
+    }, 200);
   });
 
 });
+
+// parceiros
+
+const scrollers = document.querySelectorAll(".scroller");
+
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
