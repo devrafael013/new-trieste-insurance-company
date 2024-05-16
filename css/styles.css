@@ -101,7 +101,7 @@ button {
 
 /*Cor texto dos botões*/
 .color-text {
-  color: #65daf9;
+  color: #9FC297;
 }
 
 .main-btn:hover {
@@ -177,7 +177,7 @@ button {
 }
 
 .service-box:hover > i, .service-box:hover > h4 {
-  color: #65daf9;
+  color: #9FC297;
 }
 
 /*Botão Whats*/
@@ -284,7 +284,7 @@ button {
 
 .contact-title {
   font-weight: bold;
-  color: #3ec1d5;
+  color: #9FC297;
 }
 
 #msg-box p {
@@ -658,7 +658,7 @@ button {
 }
 
 .btn {
-  --color: #00A97F;
+  --color: #9FC297;
   --color2: rgb(10, 25, 30);
   padding: 0.8em 1.75em;
   background-color: transparent;
@@ -726,8 +726,8 @@ button {
   background-color: inherit;
   border-radius: 100px;
   font-weight: 600;
-  color: #00A97F;
-  box-shadow: 0 0 0 2px #00A97F;
+  color: #9FC297;
+  box-shadow: 0 0 0 2px #9FC297;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -736,7 +736,7 @@ button {
 .animated-button svg {
   position: absolute;
   width: 24px;
-  fill: #00A97F;
+  fill: #9FC297;
   z-index: 9;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -756,7 +756,7 @@ button {
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background-color: #00A97F;
+  background-color: #9FC297;
   border-radius: 50%;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -802,7 +802,7 @@ button {
 
 .animated-button:active {
   scale: 0.95;
-  box-shadow: 0 0 0 4px #00A97F;
+  box-shadow: 0 0 0 4px #9FC297;
 }
 
 .animated-button:hover .circle {
